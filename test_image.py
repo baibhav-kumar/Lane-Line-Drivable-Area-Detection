@@ -49,8 +49,8 @@ if __name__ == '__main__':
     print("Model loaded successfully!")
     
     # Create output directory
-    if os.path.exists('newresults'):
-        shutil.rmtree('newresults')
+    if os.path.exists('Final Results'):
+        shutil.rmtree('Final Results')
     os.mkdir('newresults')
     
     # Process images
@@ -64,6 +64,6 @@ if __name__ == '__main__':
             continue
         
         img_result = Run(model, img)
-        cv2.imwrite(os.path.join('newresults', imgName), img_result)
+        cv2.imwrite(os.path.join('Final Results', imgName), img_result)
     
     print(f"\n✓ Done! Results saved to 'newresults/' folder")
